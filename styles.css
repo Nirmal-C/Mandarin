@@ -1,0 +1,316 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;  
+    background-color: #f8f9fa; 
+    color: #495057; 
+  }
+  
+  .header {
+    background-color: #20445c; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  .header h1 {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+
+  h2{
+    margin-top: 120px;
+    padding-bottom: 30px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 10px;
+    margin-top: 40px;
+    display: flex;
+    justify-content:center;
+  }
+  
+  nav li {
+    margin: 0 55px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #dd2727; 
+  }
+  
+  .content {
+    padding: 20px;
+    margin: 0 20px; 
+  }
+  
+  .banner-title , .courses-section-title{
+    margin-top: 40px !important;
+
+  }
+
+
+
+  .content h2 {
+   
+    font-size: 32px; 
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .course-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  
+  .course-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-card h3 {
+    color: #3498db;
+    font-size: 24px;
+    text-align:center;
+  }
+  
+  .course-card p {
+    font-size: 18px;
+    color: #6c757d; 
+    line-height: 1.6;
+  }
+  
+  
+  .centered-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .centered-text {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .lecturer-image {
+    max-width: 200px;
+    height: auto;
+    
+  }
+  
+ 
+  
+
+.olcards,
+.olcards * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.olcards {
+  list-style: none;
+  counter-reset: cardCount;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  --cardsGap: 1rem;
+  gap: var(--cardsGap);
+  padding-bottom: var(--cardsGap);
+}
+.olcards li {
+  counter-increment: cardCount;
+  display: flex;
+  color: white;
+  --labelOffset: 1rem;
+  --arrowClipSize: 1.5rem;
+  margin-top: var(--labelOffset);
+}
+
+.olcards li::before {
+  content: counter(cardCount, decimal-leading-zero);
+  background: white;
+  color: var(--cardColor);
+  font-size: 2em;
+  font-weight: 700;
+  transform: translateY(calc(-1 * var(--labelOffset)));
+  margin-right: calc(-1 * var(--labelOffset));
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 0.5em;
+}
+
+.olcards li .content {
+  background-color: var(--cardColor);
+  --inlinePadding: 1em;
+  --boxPadding: 0.5em;
+  display: grid;
+  padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
+    var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+  grid-template-areas:
+    "icon title"
+    "icon text";
+  gap: 0.25em 1em;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--arrowClipSize)) 0,
+    100% 50%,
+    calc(100% - var(--arrowClipSize)) 100%,
+    calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+    0 calc(100% + var(--cardsGap))
+  );
+  position: relative;
+}
+.olcards li .content::before {
+  content: "";
+  position: absolute;
+  width: var(--labelOffset);
+  height: var(--labelOffset);
+  background: var(--cardColor);
+  left: 0;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  filter: brightness(0.75);
+}
+.olcards li .content::after {
+  content: "";
+  position: absolute;
+  height: var(--cardsGap);
+  width: var(--cardsGap);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+  left: 0;
+  top: 100%;
+}
+
+.olcards li .content .title {
+  grid-area: title;
+  font-size: 1.25em;
+  font-weight: 700; 
+}
+
+
+.contact-card {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  color: #495057;
+}
+
+.card p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.vision-title, .mission-title{
+    color: #dd2727  !important ;
+    margin-top: 10px !important;
+
+}
+
+#vision{
+  margin-right: 20px;
+}
+  .vision-mission {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; 
+  }
+  
+  .cloud-banner {
+    background-color: #051620;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%; 
+  }
+  
+  .cloud-banner h2 {
+    margin-bottom: 10px;
+  }
+  
+  .cloud-banner p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+ 
+  .cloud-banner::before {
+    content: '\2601'; 
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .cloud-banner::after {
+    content: '\2601'; 
+    font-size: 40px;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .footer {
+    background-color: #325b75;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
