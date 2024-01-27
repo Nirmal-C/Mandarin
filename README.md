@@ -1,2 +1,2 @@
 # Mandarin
-Web Site for Mandarin School
+Web Site for the Mandarin School in Sri Lanka
