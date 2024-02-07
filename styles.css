@@ -1,5 +1,7 @@
+
+
 body {
-    margin: 0;
+  margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;  
@@ -8,16 +10,20 @@ body {
   }
   
   .header {
-    background-color: #20445c; 
+    background-image: url('cover.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-color: #20445c;*/
     color: white;
     padding: 20px;
     text-align: center;
   }
   
-  .logo {
+  /* .logo {
     max-width: 200px;
     height: auto;
-  }
+  } */
+  
   
   .header h1 {
     margin-top: 10px;
@@ -29,40 +35,78 @@ body {
     padding-bottom: 30px;
   }
   
+  nav {
+  
+    margin-top: 350px;
+  
+
+  }
+
+  nav a:hover,
+  nav li.active a {
+      color: #ec2525;
+  }
+  
+
   nav ul {
-    list-style: none;
-    padding: 10px;
-    margin-top: 40px;
-    display: flex;
-    justify-content:center;
+      list-style: none;
+      padding: 10px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
   }
   
   nav li {
-    margin: 0 55px;
+      margin: 0 55px;
   }
   
   nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      font-size: 27px;
+      transition: color 0.3s ease;
   }
   
-  nav a:hover {
-    color: #dd2727; 
+  
+  .content-border {
+    padding: 100px;
+    margin: 0 200px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  } 
+
+  .content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #495057;
+    margin-bottom: 20px;
+  }
+
+  .vision-mission-text{
+    color: #ffffff !important;
+
   }
   
-  .content {
-    padding: 20px;
-    margin: 0 20px; 
-  }
   
-  .banner-title , .courses-section-title{
+  .banner-title , .courses-page-title, .testimonials-page-title{
     margin-top: 40px !important;
 
   }
 
+  .cloud-image-banner {
+    text-align: center;
+    position: relative;
+  }
+  
+  .cloud-image {
+    margin: 0;
+    width: 570px;
+    height: 500px;
+  }
+  
 
 
   .content h2 {
@@ -126,14 +170,13 @@ body {
     
   }
   
- 
-  
 
-.olcards,
-.olcards * {
-  margin: 0;
+.olcards {
+  margin-left: 30% ;
   padding: 0;
   box-sizing: border-box;
+  align-items: left;
+  
 }
 
 .olcards {
@@ -260,6 +303,7 @@ body {
 
 
 
+
 .vision-title, .mission-title{
     color: #dd2727  !important ;
     margin-top: 10px !important;
@@ -308,9 +352,145 @@ body {
     margin-top: 10px;
   }
   
+
+  .testimonials-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonials-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonials-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonials-card h3 {
+  text-align:center;
+  color: #495057;
+} 
+
+.testimonials-card p {
+    margin: 10px 0;
+}
+
+.testimonials-card img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
   .footer {
     background-color: #325b75;
     color: white;
     padding: 20px;
     text-align: center;
   }
+
+
+  @media only screen and (max-width: 1500px) {
+nav{
+  margin-top: 240px;
+}
+
+    nav a {
+  font-size: 20px;    
+  }
+
+
+
+    .content-border {
+      margin: 50px;
+      padding: 20px;
+    }
+  
+    .testimonials-card {
+      width: calc(50% - 20px);
+    }
+  }
+
+@media only screen and (max-width: 990px) {
+  nav{
+    margin-top: 240px;
+  }
+  
+      nav a {
+    font-size: 20px;    
+    }
+  
+  .content-border{
+    margin: 30px;
+    padding: 20;
+  }
+
+  .testimonials-card {
+    width: calc(50% - 20px);
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  nav{
+    margin-top: 120px;
+    margin-left: 80px;
+    margin-right: 80px;
+
+   
+  }
+  
+      nav a {
+    font-size: 16px;    
+    }
+  
+
+  .cloud-image{
+    width: 400px;
+     }
+  .content-border {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .testimonials-card {
+    width: calc(50% - 20px);
+  }
+}
+
+
+
+@media only screen and (max-width: 575px){
+
+nav{
+  margin-top: 120px;
+  margin-left: 80px;
+  margin-right: 80px;
+
+ 
+}
+
+    nav a {
+  font-size: 16px;    
+  }
+
+
+  .cloud-image{
+ width: 400px;
+  }
+  .content-border {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .testimonials-card {
+    width: 100%;
+  }
+}
